@@ -1,0 +1,30 @@
+.goalForm {
+box-shadow: 1px 1px 5px 0px #000;
+border-radius: 10px;
+  width: 500px;
+  display: inline-block;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  padding: 5px; 
+  margin-bottom: 20px;
+}
+
+.goalForm_title{
+    font-size: 16px;
+}
+
+.goalForm_input{
+    width: 90%;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.goalForm_btn{
+    background-color: #CD104D;
+    border: 0px;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
