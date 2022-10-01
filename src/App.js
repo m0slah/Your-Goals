@@ -1,27 +1,36 @@
+import { React, useState } from "react";
+
 import "./App.css";
-import GoalFrom from "./Components/GoalFrom";
-import GoalsList from "./Components/GoalsList";
+import GoalsList from "./Components/Goals/GoalsList";
+import NewGoals from "./Components/NewGoals/NewGoals";
+
+const DUMMY_EXPENSES = [
+
+  {
+    id: 1,
+    title: "Reading Advance Computer Programming",
+  },
+  {
+    id: 2,
+    title: "Compele Cyber Security Project",
+  },
+];
 
 function App() {
-  const goals = [
-    {
-      id: 1,
-      title: "Learn React",
-    },
-    {
-      id: 2,
-      title: "Reading Advance Computer Programming",
-    },
-    {
-      id: 3,
-      title: "Compele Cyber Security Project",
-    },
-  ];
+  const [goals, setGoals] = useState(DUMMY_EXPENSES);
 
-  return <div className="App">
-  <GoalFrom/>
-  <GoalsList onGoals={goals}/>
-  </div>;
+  const addGoallHandler = (goal) => {
+    setGoals((prevGoal) => {
+      return [goal, ...prevGoal];
+    });
+  };
+
+  return (
+    <div className="App">
+      <NewGoals onAddGoal={addGoallHandler} />
+      <GoalsList onGoals={goals} />
+    </div>
+  );
 }
 
 export default App;
