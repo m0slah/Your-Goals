@@ -19,6 +19,7 @@ border-radius: 10px;
     border-radius: 3px;
     padding: 5px;
     border: 1px solid black;
+    outline: none;
 }
 
 .goalForm_btn{

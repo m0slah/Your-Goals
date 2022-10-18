@@ -27,8 +27,8 @@ function App() {
 
   return (
     <div className="App">
-      <NewGoals onAddGoal={addGoallHandler} />
-      <GoalsList onGoals={goals} />
+      <NewGoals onAddGoal={addGoallHandler}/>
+      <GoalsList onGoals={goals}/>
     </div>
   );
 }
